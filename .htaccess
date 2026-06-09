@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# convert .aspx&query to .aspx?query
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.aspx&([^\s]+) [NC]
+RewriteRule ^(.+\.aspx)&(.*)$ /$1?$2 [R=301,L,NE]
+
+RewriteRule ^clientsettings/+(.+)$ /$1 [R=301,L]
+RewriteRule ^ephemeralcounters/+(.+)$ /$1 [R=301,L]
+RewriteRule ^versioncompatibility/+(.+)$ /$1 [R=301,L]
+
+# removes .php extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.php$
+RewriteRule ^(.+)$ $1.php [L]
+
+ErrorDocument 404 /request-error
+ErrorDocument 403 /request-error
+ErrorDocument 500 /request-error

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^friends/list-json$ friends/list-json.php [L,QSA]
+
+# /0, /0/profile, /0/inventory, /0/friends
+RewriteRule ^([0-9]+)(?:/(profile))?/?$ {id}/index.php?tab=$2 [L,QSA]
+RewriteRule ^([0-9]+)(?:/(inventory))?/?$ {id}/inventory.php?tab=$2 [L,QSA]
+RewriteRule ^([0-9]+)(?:/(friends))?/?$ {id}/friends.php?tab=$2 [L,QSA]

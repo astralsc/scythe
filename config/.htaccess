@@ -1,0 +1,7 @@
+<FilesMatch "^(db|config|filterlist)\.php$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(database)\.sql$">
+    Require all denied
+</FilesMatch>

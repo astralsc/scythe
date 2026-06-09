@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# keep api
+RewriteRule ^getgameinstancesjson$ getgameinstancesjson.php [L,QSA]
+RewriteRule ^moreresultscached$ moreresultscached.php [L,QSA]
+RewriteRule ^refer$ refer.php [L,QSA]
+
+# /games/123
+# /games/123/Game-Name
+RewriteRule ^([0-9]+)(?:/[^/]+)?/?$ {id}/index.php [L,QSA]

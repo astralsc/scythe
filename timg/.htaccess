@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# removes .png extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.png$
+RewriteRule ^(.+)$ $1.png [L]
