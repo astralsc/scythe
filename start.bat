@@ -24,21 +24,21 @@ pause
 goto menu
 
 :setup
-cd src
+cd laravel
 cls
 call setup.bat
 pause
 exit
 
 :start
-cd src 
+cd laravel 
 cls 
 call start.bat
 pause 
 exit
 
 :both
-cd src
+cd laravel
 cls
 call setup.bat
 call start.bat
@@ -46,7 +46,7 @@ pause
 exit
 
 :cleanup
-cd src
+cd laravel
 cls
 call cleanup.bat
 pause
