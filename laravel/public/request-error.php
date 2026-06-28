@@ -1,4 +1,11 @@
 <?php
+$logFile = __DIR__ . '/404.log';
+$requestUri = $_SERVER['REQUEST_URI'];
+$entry = "URL: $requestUri\n";
+file_put_contents($logFile, $entry, FILE_APPEND);
+?>
+
+<?php
 $id = $_GET['id'];
 $mode = $_GET['mode'];
 $code = $_GET['code']; // 404
@@ -85,29 +92,29 @@ $bannerLabel = $bannerText; // announcment
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700" rel="stylesheet" type="text/css">
 
     <link rel="canonical" href="/request-error?id=&amp;mode=&amp;code=404"/>
-    
-    
+
+
 <link rel="stylesheet" href="/static.rbxcdn.com/css/leanbase___17430914d145b9ee9176185d539072d7_m.css/fetch"/>
 
 
-    
+
 <link rel="stylesheet" href="/static.rbxcdn.com/css/page___cbc3692928170572067a352e47de68e8_m.css/fetch"/>
 
-    
-    
-    
+
+
+
     <script type="text/javascript" src="/ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='/js/jquery/jquery-1.11.1.js'><\/script>")</script>
 <script type="text/javascript" src="/ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='/js/jquery/jquery-migrate-1.2.1.js'><\/script>")</script>
 
 
-    
+
     <script type="text/javascript" src="/js.rbxcdn.com/379cff48ae23ba8f6ba4ce43ff9630f7.js"></script>
 
 
-    
-    
+
+
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <link href="favicon.ico" rel="icon"/>
 
@@ -122,7 +129,7 @@ $bannerLabel = $bannerText; // announcment
             googletag.display(GPTRandomSlotIdentifier);
             return;
         }
-        
+
         if (typeof slotId !== 'undefined' && slotId && slotId.length > 0) {
             var slotElm = $("#"+slotId);
             if (slotElm.is(":visible")) {
@@ -143,12 +150,12 @@ $bannerLabel = $bannerText; // announcment
 </script>
 
 
-    
+
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -167,7 +174,7 @@ $bannerLabel = $bannerText; // announcment
 
         _gaq.push(['c._setAccount', 'UA-26810151-2']);
             _gaq.push(['c._setDomainName', 'roblox.com']);
-        
+
         (function () {
             var ga = document.createElement('script');
             ga.type = 'text/javascript';
@@ -178,7 +185,7 @@ $bannerLabel = $bannerText; // announcment
         })();
     </script>
 
-    
+
             <script type="text/javascript">
             if (Roblox && Roblox.EventStream) {
                 Roblox.EventStream.Init("/ecsv2.roblox.com/www/e.png",
@@ -273,8 +280,8 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
 </div>
 <div id="http-retry-data" data-http-retry-max-timeout="8000" data-http-retry-base-timeout="1000">
 </div>
-    
-    
+
+
 
 
 <div id="fb-root"></div>
@@ -298,10 +305,10 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
         <noscript><div class="SystemAlert"><div class="alert-info" role="alert">Please enable Javascript to use all the features on this site.</div></div></noscript>
         <?php if (!empty($banner)): ?>
         <div /*style="background-color: green";*/ class="alert-info" role="alert"><?php echo $bannerLabel;?></div>
-        <?php endif; ?>   
+        <?php endif; ?>
         <div class="content  ">
 
-                                    
+
 
 <div class="request-error-page-content">
     <div class="default-error-page">
@@ -317,14 +324,14 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
         </div>
     </div>
 </div>
-            
+
         </div>
-            </div> 
+            </div>
 
 <?php pageBuilder::buildFooter(); ?>
 
 
-</div> 
+</div>
 
 
 
@@ -424,7 +431,7 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
                 Roblox.VideoPreRoll.showVideoPreRoll = false;
                 Roblox.VideoPreRoll.isPrerollShownEveryXMinutesEnabled = true;
                 Roblox.VideoPreRoll.loadingBarMaxTime = 33000;
-                Roblox.VideoPreRoll.videoOptions.key = "robloxcorporation"; 
+                Roblox.VideoPreRoll.videoOptions.key = "robloxcorporation";
                     Roblox.VideoPreRoll.videoOptions.categories = "AgeUnknown,GenderUnknown";
                                      Roblox.VideoPreRoll.videoOptions.id = "games";
                 Roblox.VideoPreRoll.videoLoadingTimeout = 11000;
@@ -433,16 +440,16 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
                 Roblox.VideoPreRoll.logsEnabled = true;
                 Roblox.VideoPreRoll.excludedPlaceIds = "32373412";
                 Roblox.VideoPreRoll.adTime = 15;
-                    
+
                 Roblox.VideoPreRoll.specificAdOnPlacePageEnabled = true;
                 Roblox.VideoPreRoll.specificAdOnPlacePageId = 192800;
                 Roblox.VideoPreRoll.specificAdOnPlacePageCategory = "stooges";
-                
-                                    
+
+
                 Roblox.VideoPreRoll.specificAdOnPlacePage2Enabled = true;
                 Roblox.VideoPreRoll.specificAdOnPlacePage2Id = 2370766;
                 Roblox.VideoPreRoll.specificAdOnPlacePage2Category = "lego";
-                
+
                 $(Roblox.VideoPreRoll.checkEligibility);
             }
         });
@@ -531,7 +538,7 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
     Roblox.Client._currentPluginVersion = '';
     Roblox.Client._eventStreamLoggingEnabled = false;
 
-        
+
         Roblox.Client._installSuccess = function() {
             if(GoogleAnalyticsEvents){
                 GoogleAnalyticsEvents.ViewVirtual('InstallSuccess');
@@ -541,7 +548,7 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
                 }
             }
         }
-        
+
     </script>
 
 
@@ -560,13 +567,13 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
             <a href id="roblox-decline-btn"><span></span></a>
         </div>
         <div class="ConfirmationModalFooter">
-        
-        </div>  
-    </div>  
+
+        </div>
+    </div>
     <script type="text/javascript">
         Roblox = Roblox || {};
         Roblox.Resources = Roblox.Resources || {};
-        
+
         //<sl:translate>
         Roblox.Resources.GenericConfirmation = {
             yes: "Yes",
@@ -639,31 +646,31 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
             Roblox.CookieUpgrader.upgrade("GuestData", { expires: Roblox.CookieUpgrader.thirtyYearsFromNow });
             Roblox.CookieUpgrader.upgrade("RBXSource", { expires: function (cookie) { return Roblox.CookieUpgrader.getExpirationFromCookieValue("rbx_acquisition_time", cookie); } });
             Roblox.CookieUpgrader.upgrade("RBXViralAcquisition", { expires: function (cookie) { return Roblox.CookieUpgrader.getExpirationFromCookieValue("time", cookie); } });
-                
+
                 Roblox.CookieUpgrader.upgrade("RBXMarketing", { expires: Roblox.CookieUpgrader.thirtyYearsFromNow });
-                
-                            
+
+
                 Roblox.CookieUpgrader.upgrade("RBXSessionTracker", { expires: Roblox.CookieUpgrader.fourHoursFromNow });
-                
-                            
+
+
                 Roblox.CookieUpgrader.upgrade("RBXEventTrackerV2", {expires: Roblox.CookieUpgrader.thirtyYearsFromNow});
-                
+
         });
     </script>
 
 
-    
+
     <script type="text/javascript" src="/js.rbxcdn.com/b396951495755dff32204d48f9dc4d6d.js"></script>
 
 
-    
+
                     <script type="text/javascript" src="/js.rbxcdn.com/822491cace41a2d39fd76db6cfd17800.js"></script>
 
 
-    
+
     <script type="text/javascript">Roblox.config.externalResources = [];Roblox.config.paths['Pages.Catalog'] = 'https://js.rbxcdn.com/c14a216bd7773e7b637b4e6c3c2e619d.js';Roblox.config.paths['Pages.CatalogShared'] = 'https://js.rbxcdn.com/4acfdab2e6131feb84d783765b82a888.js';Roblox.config.paths['Widgets.AvatarImage'] = 'https://js.rbxcdn.com/6bac93e9bb6716f32f09db749cec330b.js';Roblox.config.paths['Widgets.DropdownMenu'] = 'https://js.rbxcdn.com/7b436bae917789c0b84f40fdebd25d97.js';Roblox.config.paths['Widgets.GroupImage'] = 'https://js.rbxcdn.com/33d82b98045d49ec5a1f635d14cc7010.js';Roblox.config.paths['Widgets.HierarchicalDropdown'] = 'https://js.rbxcdn.com/3368571372da9b2e1713bb54ca42a65a.js';Roblox.config.paths['Widgets.ItemImage'] = 'https://js.rbxcdn.com/8db82e6d725b907e91441b849cc35e47.js';Roblox.config.paths['Widgets.PlaceImage'] = 'https://js.rbxcdn.com/f2697119678d0851cfaa6c2270a727ed.js';Roblox.config.paths['Widgets.SurveyModal'] = 'https://js.rbxcdn.com/d6e979598c460090eafb6d38231159f6.js';</script>
 
-    
+
     <script>
         Roblox.XsrfToken.setToken('ziPWphiIhtmU');
     </script>
@@ -678,7 +685,7 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
         Roblox.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
 </script>
-    
+
 
 <script type="text/javascript">
     $(function(){
@@ -729,29 +736,29 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
         GoogleListener.init();
 
 
-    
+
         RobloxEventManager.initialize(true);
         RobloxEventManager.triggerEvent('rbx_evt_pageview');
         trackReturns();
-        
 
-    
+
+
         RobloxEventManager._idleInterval = 450000;
         RobloxEventManager.registerCookieStoreEvent('rbx_evt_initial_install_start');
         RobloxEventManager.registerCookieStoreEvent('rbx_evt_ftp');
         RobloxEventManager.registerCookieStoreEvent('rbx_evt_initial_install_success');
         RobloxEventManager.registerCookieStoreEvent('rbx_evt_fmp');
         RobloxEventManager.startMonitor();
-        
+
 
     });
 
 </script>
 
 
-    
-    
-    
+
+
+
 
 <script type="text/javascript">
     var Roblox = Roblox || {};
@@ -767,10 +774,10 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
     };
 </script>
 
-    
+
     <script type="text/javascript" src="/js.rbxcdn.com/26f9295091a0eda56a116648d58f9ce3.js"></script>
 
-    
+
 
 
     <script>

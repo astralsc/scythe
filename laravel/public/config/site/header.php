@@ -275,14 +275,14 @@ $bannerLabel = $bannerText; // announcment
 
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'ROBLOX Android App') === false && $loggedIn == false): ?>
 <div id="wrap" class="wrap no-gutter-ads logged-out" data-gutter-ads-enabled="false">
-    
+
 <div id="header" class="navbar-fixed-top rbx-header" role="navigation">
     <div class="container-fluid">
         <div class="rbx-navbar-header">
             <div data-behavior="nav-notification" class="rbx-nav-collapse" onselectstart="return false;">
 
                 <div class="notification-red hide" title="0">
-                    
+
                 </div>
 
             </div>
