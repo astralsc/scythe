@@ -75,7 +75,7 @@ $stmt = $DBReq->prepare("
     LIMIT 1
 ");
 
-$stmt->bind_param("s", $username);
+$stmt->bind_param("s", $cvalue);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
