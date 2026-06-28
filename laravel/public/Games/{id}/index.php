@@ -608,9 +608,10 @@ Roblox.Endpoints.Urls = Roblox.Endpoints.Urls || {};
 
 
 
-                            <div id="MultiplayerVisitButton" class="VisitButton VisitButtonPlay" placeid="<?php echo $gameId; ?>" data-action="play" data-is-membership-level-ok="true">
+                            <!--<div id="MultiplayerVisitButton" class="VisitButton VisitButtonPlay" placeid="<?php echo $gameId; ?>" data-action="play" data-is-membership-level-ok="true">
                                 <a class="btn-primary-lg">Play</a>
-                            </div>
+                            </div>-->
+                            <div id=MultiplayerVisitButton class="VisitButton VisitButtonPlayGLI" placeid=<?php echo $gameId; ?> data-action=play data-is-membership-level-ok=true><a class=btn-primary-lg>Play</a></div>
 
 
 
