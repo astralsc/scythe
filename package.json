@@ -1,0 +1,30 @@
+{
+  "name": "scythe",
+  "version": "2.0.0",
+  "description": "",
+  "keywords": [
+    "git"
+  ],
+  "homepage": "https://github.com/astralsc/scythe#readme",
+  "bugs": {
+    "url": "https://github.com/astralsc/scythe/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astralsc/scythe.git"
+  },
+  "license": "GPL-3.0-only",
+  "author": "astralsc",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
